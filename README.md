@@ -1,29 +1,42 @@
-# OpenCV MediaPipe Handtracking
+# cv-mediapipe-handtracking
 
-Aplicacao em Python para interacao por gestos com webcam usando OpenCV e MediaPipe.
+Aplicacao de visao computacional com OpenCV e MediaPipe para rastreamento de maos, interacao por gestos, teclado virtual e desenho em tela.
 
-## Recursos
+## Conteudo
 
-- rastreamento de maos em tempo real
-- teclado virtual na tela
-- quadro para desenho com gestos
-- automacao local para abrir aplicativos no macOS
+- `app.py`: aplicacao principal com captura de webcam, deteccao de maos e interacoes.
+- `requirements.txt`: dependencias Python.
+- `.gitignore`: exclusoes de arquivos locais e artefatos de execucao.
 
-## Arquivos
+## Funcionalidades
 
-- `app.py`: aplicacao principal
+O projeto explora:
 
-## Como executar
+- captura de video com OpenCV;
+- deteccao e tracking de maos com MediaPipe;
+- desenho de interface sobre o frame da camera;
+- teclado virtual acionado por gestos;
+- quadro virtual para desenho;
+- automacoes locais do macOS em alguns comandos.
+
+## Como Executar
+
+Instale as dependencias:
 
 ```bash
-python3 -m venv .venv
-source .venv/bin/activate
 pip install -r requirements.txt
+```
+
+Execute:
+
+```bash
 python app.py
 ```
 
-## Observacoes
+## Requisitos de Ambiente
 
-- Este projeto foi escrito para macOS e usa comandos como `open` e `killall`.
-- O app depende de permissao de acesso a webcam.
-- Arquivos gerados em execucao, como capturas e texto digitado, nao sao versionados.
+E necessario ter webcam disponivel e permissao de acesso a camera. Algumas automacoes foram pensadas para macOS e podem exigir ajustes em outros sistemas operacionais.
+
+## Cuidados
+
+Este e um projeto experimental de interacao humano-computador. Para uso real, revise usabilidade, tratamento de erros, acessibilidade e compatibilidade entre plataformas.
